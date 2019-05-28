@@ -3,24 +3,42 @@
   src: url('fonts/dinpro.otf');
 }
 
-body {
-  font-family: 'dinpro';
-  font-size: 12px;
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border: 2px solid red;
+  z-index: 1;
 }
 
-h1 {
-  margin-bottom:0;
+header img {
+  width: 100%;
+  height: auto;
 }
 
-h1:after {
-  content:'';
-  display:block;
-  margin-top:10px;
-  margin-bottom: 0;
-  border-bottom:1px solid #cbcbcd;
-  opacity: 0.3;
+main.main-container {
+  top: 80px;
+  border: 2px solid red;
+  margin: 0 auto;
+  width: 1024px;
+  position: relative;
+  height: 1000px;
 }
 
-svg {
-  display: block;
+#earnings-chart {
+  width: 680px;
+  border: 2px solid red;
+}
+
+.sidebar-content {
+  position: absolute;
+  right: 330px;
+}
+
+#trade-panel {
+  background-color: white;
+  position: fixed;
+  top: 95px;
+  width: 275px;
+  border: 2px solid red;
 }
