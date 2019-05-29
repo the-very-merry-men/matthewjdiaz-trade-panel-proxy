@@ -23,6 +23,11 @@ app.get('/api/stocks/:stock/price', (req, res) => {
   request(`${newUrl}/api/stocks/${req.params.stock}/price`).pipe(res);
 });
 
+app.get('/api/stocks/:stock/paid', (req, res) => {
+  const newUrl = 'http://localhost:3003';
+  request(`${newUrl}/api/stocks/${req.params.stock}/paid`).pipe(res);
+})
+
 app.get('/stocks/:stock', (req, res) => {
   res.sendFile(path.join(__dirname,'../client/public/index.html'));
 });
