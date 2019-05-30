@@ -6,6 +6,8 @@ const path = require('path');
 
 const request = require('request');
 
+const stocks = require('./stocks');
+
 const app = express();
 
 const PORT = 3002;
@@ -26,7 +28,12 @@ app.get('/api/stocks/:stock/price', (req, res) => {
 app.get('/api/stocks/:stock/paid', (req, res) => {
   const newUrl = 'http://localhost:3003';
   request(`${newUrl}/api/stocks/${req.params.stock}/paid`).pipe(res);
-})
+});
+
+app.get('/api/stocks/:stock/prices/:time', (req, res) => {
+  const newUrl = 'http://localhost:3004';
+  request(`${newUrl}/api/stocks/${req.params.stock}/prices/${req.params.time}`).pipe(res);
+});
 
 app.get('/stocks/:stock', (req, res) => {
   res.sendFile(path.join(__dirname,'../client/public/index.html'));
