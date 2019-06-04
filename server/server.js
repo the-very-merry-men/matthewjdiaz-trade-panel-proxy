@@ -10,18 +10,18 @@ const stocks = require('./stocks');
 
 const app = express();
 
-const PORT = 3002;
+const PORT = 3000;
 
 app.use(express.static(path.join(__dirname,'../client/public')));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/api/stocks/:stock/earnings', (req, res) => {
-  const newUrl = 'http://localhost:3000';
+  const newUrl = 'http://52.14.233.205:3000';
   request(`${newUrl}/api/stocks/${req.params.stock}/earnings`).pipe(res);
 });
 
 app.get('/api/stocks/:stock/price', (req, res) => {
-  const newUrl = 'http://localhost:3001';
+  const newUrl = 'http://3.17.135.66:3000';
   request(`${newUrl}/api/stocks/${req.params.stock}/price`).pipe(res);
 });
 
