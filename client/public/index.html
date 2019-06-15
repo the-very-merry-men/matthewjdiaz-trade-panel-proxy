@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>title</title>
-    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/styled-components/dist/styled-components.min.js"></script>
-    <link rel='stylesheet' type='text/css' href='/styles.css'>
-  </head>
-  <body>
-    Proxy server
-    <header class="top"><img src='/img/header.jpg'/></header>
-    <main class='main-container'>
-      <div id='stock-chart-app'></div>
-      <div id='earnings-chart'></div>
-      <div id='price-paid'></div>
-      <div class='sidebar-content'>
-          <div id='trade-panel'></div>
-      </div>
-    </main>
-    <script src="http://3.17.135.66:3000/bundle.js"></script>
-    <script src="http://52.14.233.205:3000/bundle.js"></script>
-    <script src="https://chaynsaw.s3-us-west-1.amazonaws.com/bundle.js"></script>
-    <script src="https://stock-chart-bundle.s3-us-west-1.amazonaws.com/bundle.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <title>PROXY</title>
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/styled-components/dist/styled-components.min.js"></script>
+  <link rel='stylesheet' type='text/css' href='/styles.css'>
+</head>
+
+<body>
+  Proxy server
+  <header class="top"><img src='/img/header.jpg' /></header>
+  <main class='main-container'>
+    <div id='stock-chart-app'></div>
+    <div id='earnings-chart'></div>
+    <div id='price-paid'></div>
+    <div class='sidebar-content'>
+      <div id='trade-panel'></div>
+    </div>
+  </main>
+  <script src="http://localhost:3000/bundle.js"></script>
+  <script src="http://localhost:3001/bundle.js"></script>
+  <script src="http://localhost:3111/bundle.js"></script>
+  <script src="http://localhost:3420/bundle.js"></script>
+</body>
+
 </html>

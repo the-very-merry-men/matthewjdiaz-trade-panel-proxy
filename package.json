@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server-dev": "node server/server.js"
+    "start": "node ./server/proxyServerTest.js",
+    "art": "artillery run art.yml"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,9 @@
     "express": "^4.17.0",
     "path": "^0.12.7",
     "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "http-proxy-middleware": "^0.19.1",
+    "newrelic": "^5.10.0"
   }
 }
