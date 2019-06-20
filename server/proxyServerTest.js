@@ -14,9 +14,10 @@ app.use(express.static(path.join(__dirname, '../client/public')));
 // app.use('/', proxy('http://localhost:3000/'));
 // app.use('/', proxy('http://localhost:3001/'));
 // app.use('/', proxy('http://localhost:3111/'));
-app.use('/api/stocks/:stock/price', proxy('http://localhost:3420/api/stocks/:stock/price'));
-app.use('/api/stocks/:stock', proxy('http://localhost:3420/api/stocks/:stock'));
-app.use('/api/users/:username/:accountBalance', proxy('http://localhost:3420/api/users/:username/:accountBalance'));
+// app.use('/api/users/', proxy('http://localhost:3420/api/users/'));
+// app.use('/api/stocks/price', proxy('http://localhost:3420/api/stocks/price'));
+app.use('/api/stocks/:stock', proxy('http://ec2-18-220-13-243.us-east-2.compute.amazonaws.com:3420/api/stocks/'));
+// app.use('/stocks/:stock', proxy('http://ec2-18-220-13-243.us-east-2.compute.amazonaws.com:3420/stocks/6543'));
 
 // app.get('/', (req, res) => {
 //   res.status(200).sendFile(path.join(__dirname, '/client/public') + '/index.html');

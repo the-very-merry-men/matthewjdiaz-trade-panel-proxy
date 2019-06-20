@@ -1,19 +1,23 @@
 config:
   target: 'http://localhost:3010'
   phases:
-    - duration: 120
-      arrivalRate: 700
+    - duration: 1200
+      arrivalRate: 65
   defaults:
     headers:
       x-my-service-auth: '987401838271002188298567'
 scenarios:
   - flow:
     - get:
-        url: "/api/stocks/{{ $randomNumber(1,10000000) }}"
+        url: "/api/stocks/price"
+        json:
+          stock: "{{ $randomNumber(1,10000000) }}"
     - get:
-        url: "/api/stocks/{{ $randomNumber(1,10000000) }}/price"
+        url: "/api/stocks/"
+        json:
+          stock: "{{ $randomNumber(1,10000000) }}"
     - post:
-        url: "/api/users/:username/:accountBalance"
+        url: "/api/users/"
         json:
           username: 'testUser'
           accountBalance: 666.66
